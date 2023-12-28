@@ -300,7 +300,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 @property (nonatomic, strong) AWSCognitoIdentity *cognitoIdentity;
 @property (nonatomic, strong) AWSUICKeyChainStore *keychain;
 @property (nonatomic, strong) AWSExecutor *refreshExecutor;
-@property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, assign) dispatch_semaphore_t semaphore;
 @property (atomic, assign) BOOL useEnhancedFlow;
 @property (atomic, strong) AWSCredentials *internalCredentials;
 @property (atomic, assign, getter=isRefreshingCredentials) BOOL refreshingCredentials;
